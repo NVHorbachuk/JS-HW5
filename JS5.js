@@ -159,3 +159,74 @@
 // for (let worker of workers) {
 //   console.log(`${worker.fullName}: ${worker.showSalaryWithExperience()}`);
 // }
+
+
+// TASK5 Батьківський клас
+// class GeometricFigure {
+//   getArea() {
+//     return 0;
+//   }
+
+//   toString() {
+//     return Object.getPrototypeOf(this).constructor.name;
+//   }
+// }
+
+// //Triangle
+// class Triangle extends GeometricFigure {
+//   constructor(base, height) {
+//     super();
+//     this.base = base;
+//     this.height = height;
+//   }
+
+//   getArea() {
+//     return 0.5 * this.base * this.height;
+//   }
+// }
+
+// //Square
+// class Square extends GeometricFigure {
+//   constructor(side) {
+//     super();
+//     this.side = side;
+//   }
+
+//   getArea() {
+//     return this.side ** 2;
+//   }
+// }
+
+// //Circle
+// class Circle extends GeometricFigure {
+//   constructor(radius) {
+//     super();
+//     this.radius = radius;
+//   }
+
+//   getArea() {
+//     return Math.PI * this.radius ** 2;
+//   }
+// }
+
+// // Обробка масиву фігур
+// function handleFigures(figures) {
+//   return figures.reduce((total, figure) => {
+//     if (figure instanceof GeometricFigure) {
+//       const area = figure.getArea();
+//       console.log(`Geometric figure: ${figure.toString()} - area: ${area}`);
+//       return total + area;
+//     }
+//     return total;
+//   }, 0);
+// }
+
+// // Масив фігур
+// const figures = [
+//   new Triangle(1, 5),
+//   new Square(10),
+//   new Circle(9)
+// ];
+
+// // Виклик функції
+// console.log(handleFigures(figures));
